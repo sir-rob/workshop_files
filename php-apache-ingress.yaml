@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: php-apache-studentX-ingress
+  namespace: studentX
+  annotations:
+    kubernetes.io/ingress.class: "tectonic"
+spec:
+  rules:
+    - host: php-apache-studentX.workshop05.se.aws.event-cloud.net
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: php-apache-studentX
+              servicePort: 80
