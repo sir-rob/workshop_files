@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: hello-world-ingress
+  name: hello-world-studentX-ingress
   namespace: studentX
   annotations:
     kubernetes.io/ingress.class: "tectonic"
 spec:
   rules:
-    - host: hello-world.workshop05.se.aws.event-cloud.net
+    - host: hello-world-studentX.workshop05.se.aws.event-cloud.net
       http:
         paths:
           - path: /
             backend:
-              serviceName: hello-world
+              serviceName: hello-world-studentX
               servicePort: 80
