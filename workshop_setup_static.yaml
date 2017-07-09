@@ -1,0 +1,386 @@
+# Create a new namespace called student0
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student0
+---
+# Create a new Role called student0-all-role, with full access to app apiGroups and all resources inside of Namespace student0
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student0
+  name: student0-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student0-all-rolebinding that binds the Role student0-all-role to user student0
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student0-all-rolebinding
+  namespace: student0
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student0@example.com
+roleRef:
+  kind: Role
+  name: student0-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student1
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student1
+---
+# Create a new Role called student1-all-role, with full access to app apiGroups and all resources inside of Namespace student1
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student1
+  name: student1-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student1-all-rolebinding that binds the Role student1-all-role to user student1
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student1-all-rolebinding
+  namespace: student1
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student1@example.com
+roleRef:
+  kind: Role
+  name: student1-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student2
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student2
+---
+# Create a new Role called student2-all-role, with full access to app apiGroups and all resources inside of Namespace student2
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student2
+  name: student2-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student2-all-rolebinding that binds the Role student2-all-role to user student2
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student2-all-rolebinding
+  namespace: student2
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student2@example.com
+roleRef:
+  kind: Role
+  name: student2-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student3
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student3
+---
+# Create a new Role called student3-all-role, with full access to app apiGroups and all resources inside of Namespace student3
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student3
+  name: student3-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student3-all-rolebinding that binds the Role student3-all-role to user student3
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student3-all-rolebinding
+  namespace: student3
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student3@example.com
+roleRef:
+  kind: Role
+  name: student3-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student4
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student4
+---
+# Create a new Role called student4-all-role, with full access to app apiGroups and all resources inside of Namespace student4
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student4
+  name: student4-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student4-all-rolebinding that binds the Role student4-all-role to user student4
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student4-all-rolebinding
+  namespace: student4
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student4@example.com
+roleRef:
+  kind: Role
+  name: student4-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student5
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student5
+---
+# Create a new Role called student5-all-role, with full access to app apiGroups and all resources inside of Namespace student5
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student5
+  name: student5-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student5-all-rolebinding that binds the Role student5-all-role to user student5
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student5-all-rolebinding
+  namespace: student5
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student5@example.com
+roleRef:
+  kind: Role
+  name: student5-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student6
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student6
+---
+# Create a new Role called student6-all-role, with full access to app apiGroups and all resources inside of Namespace student6
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student6
+  name: student6-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student6-all-rolebinding that binds the Role student6-all-role to user student6
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student6-all-rolebinding
+  namespace: student6
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student6@example.com
+roleRef:
+  kind: Role
+  name: student6-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student7
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student7
+---
+# Create a new Role called student7-all-role, with full access to app apiGroups and all resources inside of Namespace student7
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student7
+  name: student7-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student7-all-rolebinding that binds the Role student7-all-role to user student7
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student7-all-rolebinding
+  namespace: student7
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student7@example.com
+roleRef:
+  kind: Role
+  name: student7-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student8
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student8
+---
+# Create a new Role called student8-all-role, with full access to app apiGroups and all resources inside of Namespace student8
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student8
+  name: student8-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student8-all-rolebinding that binds the Role student8-all-role to user student8
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student8-all-rolebinding
+  namespace: student8
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student8@example.com
+roleRef:
+  kind: Role
+  name: student8-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new namespace called student9
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: student9
+---
+# Create a new Role called student9-all-role, with full access to app apiGroups and all resources inside of Namespace student9
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  namespace: student9
+  name: student9-all-role
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["*"]
+---
+# Create a new RoleBinding called student9-all-rolebinding that binds the Role student9-all-role to user student9
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: student9-all-rolebinding
+  namespace: student9
+subjects:
+  - kind: User
+    # this needs to match your username
+    name: student9@example.com
+roleRef:
+  kind: Role
+  name: student9-all-role
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new ClusterRole called list-ns-all, that only has access to list namespaces
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: list-ns-all
+rules:
+  - apiGroups:
+    - ""
+    # attributeRestrictions: null
+    resources:
+    - namespaces/status
+    verbs:
+    - get
+    - list
+    - watch
+  - apiGroups:
+    - ""
+    # attributeRestrictions: null
+    resources:
+    - namespaces
+    verbs:
+    - get
+    - list
+    - watch
+---
+# Create a new ClusterRoleBinding called cluster-role-list-ns-all-members, that binds the role list-ns-all to authenticated users
+#kind: ClusterRoleBinding
+#apiVersion: rbac.authorization.k8s.io/v1beta1
+#metadata:
+#  name: cluster-role-list-ns-all-members
+#subjects:
+#  - kind: Group
+#    name: system:authenticated
+#roleRef:
+#  kind: ClusterRole
+#  name: list-ns-all
+#  apiGroup: "rbac.authorization.k8s.io"
+#---
+# Create a new ClusterRoleBinding called cluster-role-all-discover-api That will use the system:discovery ClusterRole and bind all users (authenticated and unauthenticated) to it, allowing them to access 
+# swagger and API group information.
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: cluster-role-all-discover-api
+subjects:
+  - kind: Group
+    name: system:authenticated
+  - kind: Group
+    name: system:unauthenticated
+roleRef:
+  kind: ClusterRole
+  name: system:discovery
+  apiGroup: "rbac.authorization.k8s.io"
+---
+# Create a new ClusterRoleBinding called cluster-role-all-view That will use the view ClusterRole and bind all users (authenticated) to it, allowing them to view everything.
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: cluster-role-all-view
+subjects:
+  - kind: Group
+    name: system:authenticated
+roleRef:
+  kind: ClusterRole
+  name: view
+  apiGroup: "rbac.authorization.k8s.io"
