@@ -1,7 +1,7 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: nfs_pvc_studentX
+  name: nfs-x
 spec:
   accessModes:
     - ReadWriteMany
