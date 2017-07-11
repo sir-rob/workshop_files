@@ -4,7 +4,7 @@ kind: Pod
 metadata:
   labels:
     test: liveness
-  name: liveness-exec-studentX
+  name: liveness-exec-studentx
 spec:
   containers:
 
