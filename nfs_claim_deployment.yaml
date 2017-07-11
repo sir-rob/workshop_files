@@ -1,0 +1,46 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: hello-world-nfs
+  annotations:
+    deployment.kubernetes.io/revision: '1'
+  labels:
+    run: hello-world-nfs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: hello-world-nfs
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: hello-world-nfs
+    spec:
+      containers:
+        - name: hello-world-nfs
+          image: 'quay.io/praveenr/simplewebapp:v12'
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          volumeMounts:
+            - name: mypd
+              mountPath: /tmp/data
+          terminationMessagePolicy: File
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+      securityContext: {}
+      schedulerName: default-scheduler
+      volumes:
+        - name: mypd
+          persistentVolumeClaim:
+            claimName: nfs-x
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
