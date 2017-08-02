@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: "tectonic"
 spec:
   rules:
-    - host: php-apache-studentX.workshop05.se.aws.event-cloud.net
+    - host: php-apache-studentX.walgreens.se.aws.event-cloud.net
       http:
         paths:
           - path: /
