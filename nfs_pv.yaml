@@ -10,4 +10,5 @@ spec:
   nfs:
     server: 10.0.36.112
     path: "/nfs/data"
+  persistentVolumeReclaimPolicy: Recycle
   storageClassName: slow
